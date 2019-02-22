@@ -1,0 +1,24 @@
+h3{
+	font-family: Impact;
+	color: black;
+	font-size: 35;
+	background-color: #00896d;
+	margin: auto;
+}
+#all{
+	width: 260px;
+	padding: 20px;
+	background: #00896d;
+	padding: 10pd;
+	margin: auto;
+
+}
+
+ul li:hover {
+	cursor: pointer;
+	position: relative;
+	padding: 1px 3x 1px 30px;
+	background: #eee;
+	font-size: 18px;
+	transition: 0.3
+}

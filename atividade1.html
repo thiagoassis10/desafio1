@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Lista</title>
+		<link rel="stylesheet" type="text/css" href="background.css">
+		<meta charset="utf-8" />
+	</head>
+	<body>
+  		<div id="all">
+  			<header>
+  			<h3>✔ LISTA ✔</h3>
+  			<input type="text" id="myInput" placeholder="atividade...">
+  			<button onclick="newElement()" class="addBtn">adicionar</button>
+  			</header>
+			<ul id="UL">
+		  		<li>Escovar os dentes</li>
+		  		<li>Correr</li>
+		  		<li>Trabalhar</li>
+		  		<li>Ir ao mercado</li>
+		  		<li>Arrumar a janta</li>
+			</ul>
+		</div>
+	<script> 
+         myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+          var button = document.createElement("BUTTON");
+          var txt = document.createTextNode("\u00D7");
+          button.className = "close";
+          button.appendChild(txt);
+          myNodelist[i].appendChild(button);
+        }
+       function newElement() {
+  		var li = document.createElement("LI");
+  		var inputValue = document.getElementById("myInput").value;
+  		var t = document.createTextNode(inputValue);
+  		li.appendChild(t);
+  		if (inputValue === '') {
+    	alert("Digite Algo");
+  		} else {
+	    	document.getElementById("UL").appendChild(li);
+	  	}
+	  		document.getElementById("myInput").value = "";
+
+	  var button = document.createElement("BUTTON");
+	  var txt = document.createTextNode("\u00D7");
+	  button.className = "close";
+	  button.appendChild(txt);
+	  li.appendChild(button);
+
+	  for (i = 0; i < close.length; i++) {
+	    close[i].onclick = function() {
+	      var div = this.parentElement;
+	      div.style.display = "none";
+	    }
+	  }
+	}
+	        // Cria o limpar. 
+	        var close = document.getElementsByClassName("close");
+	        var i;
+	        for (i = 0; i < close.length; i++) {
+	          close[i].onclick = function() {
+	            var div = this.parentElement;
+	            div.style.display = "none";
+	          }
+	        }
+        </script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
